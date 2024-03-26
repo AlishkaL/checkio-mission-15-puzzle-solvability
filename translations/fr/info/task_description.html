@@ -1,0 +1,48 @@
+<!-- Describe task in general -->
+
+<p>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a> est un puzzle assez ancien et célèbre, qui a eu son propre pic d'intérêt!
+</p>
+<p>
+    Dans cette mission, on vous donne un <b>position</b> de tuiles - un{% if is_js %}n tableau de 4 tableaux de même longueur avec tous les nombres{% else %} liste de 4 listes de même longueur avec tous les entiers{% endif %} de 1 à 16 incl. dans un ordre arbitraire (mais le numéro 16 représente toujours la place vide!). Votre fonction doit renvoyer une valeur booléenne, si cette combinaison de tuiles est résoluble (peut être transformée par des mouvements valides dans un ordre "normal") ou non, de la manière suivante <b>{% if is_js %}t{% else %}T{% endif %}rue</b> ou <b>{% if is_js %}f{% else %}F{% endif %}alse</b> respectivement.
+</p>
+<p>
+    Voici une vidéo intéressante sur le puzzle lui-même et son problème de solvabilité avec l'algorithme de vérification expliqué. Si vous n'aimez pas les spoilers, vous pouvez essayer de résoudre la mission sans regarder la vidéo.
+</p>
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YI1WqYKHi78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Une position de tuiles sous forme de{% if is_js %}n tableau de 4 tableaux de nombres{% else %} liste de 4 listes d'entiers{% endif %} de 1 à 16 incl.
+</p>
+
+<p>
+   <strong>Résultat:</strong> Solvabilité du puzzle sous forme de valeur booléenne. 
+</p>
+
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Comment il est utilisé:</strong>
+    <i>il est toujours intéressant de savoir quelle logique interne se cache derrière des jeux et des énigmes bien connus.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Conditions préalables:</strong>
+    <ul>
+    <li><i>len(position) == len(position[i]) == 4;</i></li>
+    <li><i>set(sum(position, [])) == {1, 2, ... 16}.</i></li>
+    </ul>
+</p>
