@@ -1,0 +1,48 @@
+<!-- Describe task in general -->
+
+<p>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a> to dość stara i znana łamigłówka, która miała swój szczyt zainteresowania!
+</p>
+<p>
+    W tym zadaniu otrzymują Państwo <b>position</b> kafelków - tablicę{% if is_js %}n złożoną z 4 tablic równej długości ze wszystkimi liczbami{% else %} listę złożoną z 4 list równej długości ze wszystkimi liczbami całkowitymi{% endif %} od 1 do 16 w dowolnej kolejności (ale liczba 16 zawsze oznacza puste miejsce!). Pana funkcja powinna zwracać wartość logiczną, jeśli ta kombinacja płytek jest rozwiązywalna (może być przekształcona przez prawidłowe ruchy do "normalnej" kolejności) lub nie, jako <b>{% if is_js %}t{% else %}T{% endif %}rue</b> lub <b>{% if is_js %}f{% else %}F{% endif %}alse</b> odpowiednio.
+</p>
+<p>
+    Poniżej znajduje się interesujący film o samej łamigłówce i jej rozwiązywalności wraz z objaśnionym algorytmem sprawdzania. Jeśli więc nie lubią Państwo spoilerów, mogą Państwo spróbować rozwiązać misję bez oglądania filmiku.
+</p>
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YI1WqYKHi78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Dane wejściowe:</strong> Położenie płytek jako{% if is_js %}n tablica 4 tablic liczb{% else %} lista 4 list liczb całkowitych{% endif %} od 1 do 16 w tym.
+</p>
+
+<p>
+   <strong>Dane wyjściowe:</strong> Rozwiązywalność łamigłówki jako wartość logiczna. 
+</p>
+
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Jak to jest używane:</strong>
+    <i>to zawsze interesujące, jaka wewnętrzna logika stoi za znanymi grami i łamigłówkami.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Warunki wstępne:</strong>
+    <ul>
+    <li><i>len(position) == len(position[i]) == 4;</i></li>
+    <li><i>set(sum(position, [])) == {1, 2, ... 16}.</i></li>
+    </ul>
+</p>
