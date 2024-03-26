@@ -1,0 +1,48 @@
+<!-- Describe task in general -->
+
+<p>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a> ist ein ziemlich altes und berühmtes Rätsel, das seinen eigenen Höhepunkt hatte!
+</p>
+<p>
+    In dieser Aufgabe wird Ihnen eine <b>position</b> von Kacheln gegeben - ein{% if is_js %}n Array von 4 Arrays gleicher Länge mit allen Zahlen{% else %} Liste von 4 Listen gleicher Länge mit allen ganzen Zahlen{% endif %} von 1 bis 16 inkl. in beliebiger Reihenfolge (aber die Zahl 16 steht immer für einen leeren Platz!). Ihre Funktion sollte einen booleschen Wert zurückgeben, der angibt, ob diese Kombination von Kacheln auflösbar ist (kann durch gültige Züge in eine "normale" Reihenfolge umgewandelt werden) oder nicht, wie <b>{% if is_js %}t{% else %}T{% endif %}rue</b> oder <b>{% if is_js %}f{% else %}F{% endif %}alse</b> entsprechend.
+</p>
+<p>
+    Hier ist ein interessantes Video über das Rätsel selbst und sein Lösbarkeitsproblem, in dem der Algorithmus zur Überprüfung erklärt wird. Wenn Sie also keine Spoiler mögen, können Sie versuchen, die Aufgabe zuerst zu lösen, ohne sich das Video anzusehen.
+</p>
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YI1WqYKHi78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Eingabe:</strong> Eine Position von Kacheln als{% if is_js %}n Array von 4 Arrays von Zahlen{% else %} Liste von 4 Listen von ganzen Zahlen{% endif %} von 1 bis 16 incl.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Lösbarkeit des Rätsels als boolescher Wert. 
+</p>
+
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>Wie es verwendet wird:</strong>
+    <i>es ist immer interessant, welche innere Logik hinter bekannten Spielen und Rätseln steht.</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Vorbedingungen:</strong>
+    <ul>
+    <li><i>len(position) == len(position[i]) == 4;</i></li>
+    <li><i>set(sum(position, [])) == {1, 2, ... 16}.</i></li>
+    </ul>
+</p>
