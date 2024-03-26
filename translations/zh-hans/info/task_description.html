@@ -1,0 +1,48 @@
+<!-- Describe task in general -->
+
+<p>
+    <a target="_blank" href="https://en.wikipedia.org/wiki/15_puzzle">15-puzzle</a> 这是一个相当古老和著名的谜题，它曾是人们关注的高峰！
+</p>
+<p>
+    在本任务中，您将得到一个<b>position</b> 的图块 -{% if is_js %}n 数组，由 4 个等长数组组成，其中所有数字均为{% else %} 列表，由 4 个等长列表组成，其中所有整数均为{% endif %} ，从 1 到 16，包括任意顺序（但数字 16 始终代表空位！）。您的函数应返回一个布尔值，说明该瓦片组合是否可解（可通过有效移动转换为 "正常 "顺序），如 <b>{% if is_js %}t{% else %}T{% endif %}rue</b>或 <b>{% if is_js %}f{% else %}F{% endif %}alse</b>分别返回
+</p>
+<p>
+    这里有一段有趣的视频，介绍了谜题本身及其可解性问题，并解释了检查算法。因此，如果你不喜欢剧透，可以不看视频，先试着解决任务。
+</p>
+<p style="text-align: center;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YI1WqYKHi78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入</strong>瓷砖的位置{% if is_js %}n 数组 4 个数字数组{% else %} 4 个整数列表{% endif %} 从 1 到 16 包括.
+</p>
+
+<p>
+   <strong>输出：</strong>谜题的可解性布尔值。 
+</p>
+
+
+<p>
+    <strong>示例</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+
+    <strong>如何使用：</strong>
+    <i>著名游戏和谜题背后的内在逻辑总是很有趣。</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>前提条件</strong>
+    <ul>
+    <li><i>len(position) == len(position[i]) == 4；</i></li>
+    <li><i>set(sum(position, [])) == {1, 2, ...16}.</i></li>
+    </ul>
+</p>
